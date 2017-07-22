@@ -2,14 +2,16 @@ package com.yadevapp.tutorial.weakreference;
 
 import android.content.Context;
 
+import java.lang.ref.WeakReference;
+
 /**
  * Created by abdoulaye on 22/07/2017.
  */
 
 public class ActivityObject {
-    private Context mActivity;
+    private WeakReference<Context> mActivity;
 
     public ActivityObject(Context activity) {
-        mActivity = activity;
+        mActivity = new WeakReference<>(activity);
     }
 }
